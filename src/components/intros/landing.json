@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_intros_landings",
+  "info": {
+    "displayName": "Landing",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Background_Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

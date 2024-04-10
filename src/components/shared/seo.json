@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "Seo",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "metaImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "keywords": {
+      "type": "string",
+      "regex": "[^,]+"
+    },
+    "metaRobots": {
+      "type": "string",
+      "regex": "[^,]+"
+    },
+    "structuredData": {
+      "type": "json"
+    },
+    "metaViewport": {
+      "type": "string"
+    },
+    "canonicalURL": {
+      "type": "string"
+    }
+  }
+}

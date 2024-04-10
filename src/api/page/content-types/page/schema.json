@@ -1,11 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "homepages",
+  "kind": "collectionType",
+  "collectionName": "pages",
   "info": {
-    "singularName": "homepage",
-    "pluralName": "homepages",
-    "displayName": "Homepage",
-    "description": ""
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
   },
   "options": {
     "draftAndPublish": true
@@ -15,10 +14,15 @@
     "Title": {
       "type": "string"
     },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
     "SEO_Meta": {
+      "displayName": "SEO_Meta",
       "type": "component",
-      "repeatable": true,
-      "component": "shared.seo"
+      "repeatable": false,
+      "component": "shared.seo-meta"
     },
     "Page_Content": {
       "type": "dynamiczone",
