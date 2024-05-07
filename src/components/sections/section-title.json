@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_section_titles",
+  "info": {
+    "displayName": "Section_Title",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

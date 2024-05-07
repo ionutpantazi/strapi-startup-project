@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_includes_itc",
+  "info": {
+    "displayName": "Image_Text_Card",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "large"
+      ]
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Impressions": {
+      "type": "integer"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

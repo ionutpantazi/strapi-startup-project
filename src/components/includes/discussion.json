@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_id",
+  "info": {
+    "displayName": "Discussion",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "FeaturedDiscussions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discussion.discussion"
+    },
+    "OtherDiscussions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discussion.discussion"
+    }
+  }
+}

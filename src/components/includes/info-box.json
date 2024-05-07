@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_includes_ib",
+  "info": {
+    "displayName": "Info_Box",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.button"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_s4",
+  "info": {
+    "displayName": "Section 4",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "CardsCarousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cards-carousel"
+    },
+    "DiscussionBox": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.discussion-box"
+    }
+  }
+}

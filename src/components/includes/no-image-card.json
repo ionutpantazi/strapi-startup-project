@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_i_nic",
+  "info": {
+    "displayName": "No_Image_Card",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Impressions": {
+      "type": "integer"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}

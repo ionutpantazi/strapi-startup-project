@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_nav_fn",
+  "info": {
+    "displayName": "Footer Navigation",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Disclaimer": {
+      "type": "string"
+    },
+    "Pillars": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nav.pillars"
+    }
+  }
+}

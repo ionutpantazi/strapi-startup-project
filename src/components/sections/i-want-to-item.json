@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_sections_iwts",
+  "info": {
+    "displayName": "IWantToSection",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Background_Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "FAIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.fa-icon"
+    }
+  }
+}

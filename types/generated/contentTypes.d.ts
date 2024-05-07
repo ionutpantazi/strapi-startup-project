@@ -998,6 +998,230 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAgendaAgenda extends Schema.CollectionType {
+  collectionName: 'agendas';
+  info: {
+    singularName: 'agenda';
+    pluralName: 'agendas';
+    displayName: 'Agenda';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Sub_Title: Attribute.String;
+    Date: Attribute.Date;
+    Start_Time: Attribute.Time;
+    End_Time: Attribute.Time;
+    Room: Attribute.String;
+    Participants: Attribute.Relation<
+      'api::agenda.agenda',
+      'oneToMany',
+      'api::speake.speake'
+    >;
+    Tags: Attribute.Relation<'api::agenda.agenda', 'oneToMany', 'api::tag.tag'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::agenda.agenda',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::agenda.agenda',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCommentComment extends Schema.CollectionType {
+  collectionName: 'comments';
+  info: {
+    singularName: 'comment';
+    pluralName: 'comments';
+    displayName: 'Comment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Slug: Attribute.UID<'api::comment.comment', 'Title'>;
+    Content: Attribute.RichText;
+    Author: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'api::speake.speake'
+    >;
+    Impressions: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDiscussionDiscussion extends Schema.CollectionType {
+  collectionName: 'discussions';
+  info: {
+    singularName: 'discussion';
+    pluralName: 'discussions';
+    displayName: 'Discussion';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Slug: Attribute.UID<'api::discussion.discussion', 'Title'>;
+    Content: Attribute.RichText;
+    Author: Attribute.Relation<
+      'api::discussion.discussion',
+      'oneToOne',
+      'api::speake.speake'
+    >;
+    Impressions: Attribute.Integer;
+    Category: Attribute.Relation<
+      'api::discussion.discussion',
+      'oneToMany',
+      'api::discussion-category.discussion-category'
+    >;
+    Comments: Attribute.Relation<
+      'api::discussion.discussion',
+      'oneToMany',
+      'api::comment.comment'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::discussion.discussion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::discussion.discussion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDiscussionCategoryDiscussionCategory
+  extends Schema.CollectionType {
+  collectionName: 'discussion_categories';
+  info: {
+    singularName: 'discussion-category';
+    pluralName: 'discussion-categories';
+    displayName: 'Discussion Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Slug: Attribute.UID<
+      'api::discussion-category.discussion-category',
+      'Title'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::discussion-category.discussion-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::discussion-category.discussion-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqFaq extends Schema.CollectionType {
+  collectionName: 'faqs';
+  info: {
+    singularName: 'faq';
+    pluralName: 'faqs';
+    displayName: 'FAQs';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Question: Attribute.Text;
+    Answer: Attribute.Text;
+    Categories: Attribute.Relation<
+      'api::faq.faq',
+      'oneToMany',
+      'api::faq-category.faq-category'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqCategoryFaqCategory extends Schema.CollectionType {
+  collectionName: 'faq_categories';
+  info: {
+    singularName: 'faq-category';
+    pluralName: 'faq-categories';
+    displayName: 'FAQ Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Slug: Attribute.UID<'api::faq-category.faq-category', 'Title'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-category.faq-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-category.faq-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomepageHomepage extends Schema.SingleType {
   collectionName: 'homepages';
   info: {
@@ -1012,7 +1236,23 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   attributes: {
     Title: Attribute.String;
     SEO_Meta: Attribute.Component<'shared.seo', true>;
-    Page_Content: Attribute.DynamicZone<['intros.landing']>;
+    Page_Content: Attribute.DynamicZone<
+      [
+        'intros.landing',
+        'intros.landing-new',
+        'intros.simple-slider',
+        'sections.speakers-carousel',
+        'sections.cards-carousel',
+        'sections.fa-qs',
+        'sections.section-title',
+        'sections.video'
+      ]
+    >;
+    Theme: Attribute.Relation<
+      'api::homepage.homepage',
+      'oneToOne',
+      'api::theme.theme'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1031,6 +1271,30 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   };
 }
 
+export interface ApiNavNav extends Schema.CollectionType {
+  collectionName: 'navs';
+  info: {
+    singularName: 'nav';
+    pluralName: 'navs';
+    displayName: 'Nav';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Header_Navigation: Attribute.Component<'nav.header-nav'>;
+    Footer_Navigation: Attribute.Component<'nav.footer-nav'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::nav.nav', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::nav.nav', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -1044,8 +1308,30 @@ export interface ApiPagePage extends Schema.CollectionType {
   attributes: {
     Title: Attribute.String;
     Slug: Attribute.UID<'api::page.page', 'Title'>;
-    SEO_Meta: Attribute.Component<'shared.seo-meta'>;
-    Page_Content: Attribute.DynamicZone<['intros.landing']>;
+    SEO_Meta: Attribute.Component<'shared.seo', true>;
+    Page_Content: Attribute.DynamicZone<
+      [
+        'intros.landing',
+        'intros.landing-new',
+        'intros.simple-slider',
+        'sections.speakers-carousel',
+        'sections.cards-carousel',
+        'sections.fa-qs',
+        'sections.section-title',
+        'sections.video',
+        'sections.i-want-to',
+        'sections.section-1',
+        'sections.section-2',
+        'sections.section-3',
+        'sections.section-4'
+      ]
+    >;
+    Theme: Attribute.Relation<'api::page.page', 'oneToOne', 'api::theme.theme'>;
+    Navigation: Attribute.Relation<
+      'api::page.page',
+      'oneToOne',
+      'api::nav.nav'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1085,6 +1371,165 @@ export interface ApiSettingsesSettingses extends Schema.SingleType {
   };
 }
 
+export interface ApiSpeakeSpeake extends Schema.CollectionType {
+  collectionName: 'speakers';
+  info: {
+    singularName: 'speake';
+    pluralName: 'speakers';
+    displayName: 'Speaker';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Position: Attribute.String;
+    Image: Attribute.Media;
+    Linkedin: Attribute.String;
+    Type: Attribute.Enumeration<['Keynote_Speaker', 'Workshop']>;
+    Intro: Attribute.Text;
+    Workshops: Attribute.Relation<
+      'api::speake.speake',
+      'oneToMany',
+      'api::workshop.workshop'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::speake.speake',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::speake.speake',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTagTag extends Schema.CollectionType {
+  collectionName: 'tags';
+  info: {
+    singularName: 'tag';
+    pluralName: 'tags';
+    displayName: 'Tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Slug: Attribute.UID<'api::tag.tag', 'Name'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiThemeTheme extends Schema.CollectionType {
+  collectionName: 'themes';
+  info: {
+    singularName: 'theme';
+    pluralName: 'themes';
+    displayName: 'Theme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Data: Attribute.JSON;
+    FAIcon: Attribute.Component<'includes.fa-icon'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::theme.theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::theme.theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiVideoCategoryVideoCategory extends Schema.CollectionType {
+  collectionName: 'video_categories';
+  info: {
+    singularName: 'video-category';
+    pluralName: 'video-categories';
+    displayName: 'Video Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Slug: Attribute.UID<'api::video-category.video-category', 'Title'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::video-category.video-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::video-category.video-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWorkshopWorkshop extends Schema.CollectionType {
+  collectionName: 'workshops';
+  info: {
+    singularName: 'workshop';
+    pluralName: 'workshops';
+    displayName: 'Workshop';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Intro: Attribute.Text;
+    Image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::workshop.workshop',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::workshop.workshop',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1107,9 +1552,21 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::agenda.agenda': ApiAgendaAgenda;
+      'api::comment.comment': ApiCommentComment;
+      'api::discussion.discussion': ApiDiscussionDiscussion;
+      'api::discussion-category.discussion-category': ApiDiscussionCategoryDiscussionCategory;
+      'api::faq.faq': ApiFaqFaq;
+      'api::faq-category.faq-category': ApiFaqCategoryFaqCategory;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::nav.nav': ApiNavNav;
       'api::page.page': ApiPagePage;
       'api::settingses.settingses': ApiSettingsesSettingses;
+      'api::speake.speake': ApiSpeakeSpeake;
+      'api::tag.tag': ApiTagTag;
+      'api::theme.theme': ApiThemeTheme;
+      'api::video-category.video-category': ApiVideoCategoryVideoCategory;
+      'api::workshop.workshop': ApiWorkshopWorkshop;
     }
   }
 }

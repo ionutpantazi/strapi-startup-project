@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agendas",
+  "info": {
+    "singularName": "agenda",
+    "pluralName": "agendas",
+    "displayName": "Agenda",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Start_Time": {
+      "type": "time"
+    },
+    "End_Time": {
+      "type": "time"
+    },
+    "Room": {
+      "type": "string"
+    },
+    "Participants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speake.speake"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}

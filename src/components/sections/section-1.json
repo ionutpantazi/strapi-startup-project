@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_sections_s1",
+  "info": {
+    "displayName": "Section 1",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "TextAndIcons": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.text-and-icons"
+    },
+    "CardsCarousel5": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cards-carousel5"
+    },
+    "CardsCarousel4": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cards-carousel4"
+    },
+    "CardsCarousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cards-carousel"
+    },
+    "Lists": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.lists"
+    },
+    "Discussion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.discussion"
+    },
+    "Section4": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.section-4"
+    }
+  }
+}

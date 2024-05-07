@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_includes_tai",
+  "info": {
+    "displayName": "Text And Filters",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "FAIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.fa-icon"
+    },
+    "Introduction": {
+      "type": "richtext"
+    },
+    "Icons": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.icons"
+    }
+  }
+}

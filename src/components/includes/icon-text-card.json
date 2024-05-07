@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_i_icontc",
+  "info": {
+    "displayName": "Icon_Text_Card",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "FAIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.fa-icon"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

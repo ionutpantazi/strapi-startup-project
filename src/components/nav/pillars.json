@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_nav_p",
+  "info": {
+    "displayName": "Pillars",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "FAIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.fa-icon"
+    },
+    "Items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nav.item"
+    }
+  }
+}

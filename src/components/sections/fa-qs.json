@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_fa_qs",
+  "info": {
+    "displayName": "FAQs",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "FAQs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    },
+    "Categories": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faq-category.faq-category"
+    },
+    "Info_Box": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.info-box"
+    }
+  }
+}

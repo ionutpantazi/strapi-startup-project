@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_s3",
+  "info": {
+    "displayName": "Section 3",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "TextAndIcons": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.text-and-icons"
+    },
+    "CardsCarousel2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cards-carousel2"
+    },
+    "CardsCarousel3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cards-carousel3"
+    }
+  }
+}

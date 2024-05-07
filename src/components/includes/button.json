@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_includes_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "ClassName": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "BackgroundColor": {
+      "type": "string"
+    },
+    "BackgroundHoverColor": {
+      "type": "string"
+    },
+    "TextColor": {
+      "type": "string"
+    },
+    "TextHoverColor": {
+      "type": "string"
+    }
+  }
+}

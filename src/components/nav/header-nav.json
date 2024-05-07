@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_nav_hn",
+  "info": {
+    "displayName": "Header Navigation",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Pillars": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nav.pillars"
+    },
+    "More_Pillars": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nav.pillars"
+    }
+  }
+}

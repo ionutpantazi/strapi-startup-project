@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_i_want_tos",
+  "info": {
+    "displayName": "IWantTo",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.i-want-to-item"
+    }
+  }
+}

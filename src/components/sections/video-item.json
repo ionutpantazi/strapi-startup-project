@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_vi",
+  "info": {
+    "displayName": "Video_Item",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "YouTubeID": {
+      "type": "string"
+    },
+    "Categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video-category.video-category"
+    }
+  }
+}

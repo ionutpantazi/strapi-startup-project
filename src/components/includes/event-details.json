@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_includes_event_details",
+  "info": {
+    "displayName": "Event_Details",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Event_Details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "includes.event-details-item"
+    },
+    "Button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.button"
+    }
+  }
+}

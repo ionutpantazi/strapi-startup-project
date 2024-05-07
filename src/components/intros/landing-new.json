@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_intros_landings",
+  "collectionName": "components_ilhn",
   "info": {
-    "displayName": "LandingHeader",
+    "displayName": "Landing_Header_New",
     "icon": "apps",
     "description": ""
   },
@@ -21,10 +21,7 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "Event_Details": {
@@ -36,6 +33,11 @@
       "type": "component",
       "repeatable": false,
       "component": "sections.i-want-to"
+    },
+    "Button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.button"
     }
   }
 }

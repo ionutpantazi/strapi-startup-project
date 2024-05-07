@@ -23,8 +23,20 @@
     "Page_Content": {
       "type": "dynamiczone",
       "components": [
-        "intros.landing"
+        "intros.landing",
+        "intros.landing-new",
+        "intros.simple-slider",
+        "sections.speakers-carousel",
+        "sections.cards-carousel",
+        "sections.fa-qs",
+        "sections.section-title",
+        "sections.video"
       ]
+    },
+    "Theme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::theme.theme"
     }
   }
 }

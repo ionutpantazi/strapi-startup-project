@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_inlist",
+  "info": {
+    "displayName": "Lists",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Visible": {
+      "type": "integer"
+    },
+    "Speakers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speake.speake"
+    },
+    "Workshops": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::workshop.workshop"
+    }
+  }
+}

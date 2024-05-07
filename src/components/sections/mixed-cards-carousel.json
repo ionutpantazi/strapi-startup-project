@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_mcc",
+  "info": {
+    "displayName": "Mixed_Cards_Carousel"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "includes.image-text-card"
+    }
+  }
+}

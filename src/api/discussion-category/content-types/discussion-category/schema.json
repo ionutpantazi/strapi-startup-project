@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discussion_categories",
+  "info": {
+    "singularName": "discussion-category",
+    "pluralName": "discussion-categories",
+    "displayName": "Discussion Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title"
+    }
+  }
+}

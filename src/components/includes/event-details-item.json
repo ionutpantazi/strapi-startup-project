@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_includes_ed_i",
+  "info": {
+    "displayName": "Event_Details_Item",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "FAIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.fa-icon"
+    },
+    "Button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.button"
+    }
+  }
+}

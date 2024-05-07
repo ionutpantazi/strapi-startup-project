@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_includes_fai",
+  "info": {
+    "displayName": "FA Icon",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "string"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "Width": {
+      "type": "string"
+    },
+    "Height": {
+      "type": "string"
+    }
+  }
+}

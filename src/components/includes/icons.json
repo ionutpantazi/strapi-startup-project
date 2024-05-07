@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_includes_i",
+  "info": {
+    "displayName": "Icons",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Filters",
+        "Agenda",
+        "Social"
+      ]
+    },
+    "Icons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "includes.icon"
+    }
+  }
+}

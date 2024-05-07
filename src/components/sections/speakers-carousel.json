@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_sc",
+  "info": {
+    "displayName": "Speakers_Carousel",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Speakers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speake.speake"
+    }
+  }
+}

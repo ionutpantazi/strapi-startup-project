@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_i_sc",
+  "info": {
+    "displayName": "Simple_Card",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ]
+    }
+  }
+}

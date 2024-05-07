@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_intros_ss",
+  "info": {
+    "displayName": "Simple_Slider",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Slides": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    }
+  }
+}
