@@ -1181,6 +1181,8 @@ export interface ApiFaqFaq extends Schema.CollectionType {
       'oneToMany',
       'api::faq-category.faq-category'
     >;
+    Test: Attribute.Blocks;
+    Test2: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1323,7 +1325,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.section-1',
         'sections.section-2',
         'sections.section-3',
-        'sections.section-4'
+        'sections.section-4',
+        'sections.section-5'
       ]
     >;
     Theme: Attribute.Relation<'api::page.page', 'oneToOne', 'api::theme.theme'>;

@@ -22,6 +22,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::faq-category.faq-category"
+    },
+    "Test": {
+      "type": "blocks"
+    },
+    "Test2": {
+      "type": "richtext"
     }
   }
 }

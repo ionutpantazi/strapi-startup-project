@@ -252,6 +252,19 @@ export interface IncludesSimpleCard extends Schema.Component {
   };
 }
 
+export interface IncludesStrapiImage extends Schema.Component {
+  collectionName: 'components_isi';
+  info: {
+    displayName: 'Strapi Image';
+    icon: 'apps';
+  };
+  attributes: {
+    Image: Attribute.Media;
+    Width: Attribute.String;
+    Height: Attribute.String;
+  };
+}
+
 export interface IncludesTextAndIcons extends Schema.Component {
   collectionName: 'components_includes_tai';
   info: {
@@ -323,7 +336,7 @@ export interface NavFooterNav extends Schema.Component {
     icon: 'apps';
   };
   attributes: {
-    Logo: Attribute.Media;
+    Logo: Attribute.Component<'includes.strapi-image'>;
     Disclaimer: Attribute.String;
     Pillars: Attribute.Component<'nav.pillars', true>;
   };
@@ -336,7 +349,7 @@ export interface NavHeaderNav extends Schema.Component {
     icon: 'apps';
   };
   attributes: {
-    Logo: Attribute.Media;
+    Logo: Attribute.Component<'includes.strapi-image'>;
     Pillars: Attribute.Component<'nav.pillars', true>;
     More_Pillars: Attribute.Component<'nav.pillars', true>;
   };
@@ -424,6 +437,21 @@ export interface SectionsCardsCarousel5 extends Schema.Component {
   attributes: {
     Title: Attribute.String;
     Cards: Attribute.Component<'includes.image-text-card', true>;
+  };
+}
+
+export interface SectionsContact extends Schema.Component {
+  collectionName: 'components_sections_contact';
+  info: {
+    displayName: 'Contact';
+    icon: 'apps';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Sub_Title: Attribute.String;
+    Details: Attribute.Component<'includes.icon', true>;
+    Social: Attribute.Component<'includes.icon', true>;
+    Interests: Attribute.Component<'includes.icon', true>;
   };
 }
 
@@ -536,6 +564,17 @@ export interface SectionsSection4 extends Schema.Component {
   attributes: {
     CardsCarousel: Attribute.Component<'sections.cards-carousel'>;
     DiscussionBox: Attribute.Component<'includes.discussion-box'>;
+  };
+}
+
+export interface SectionsSection5 extends Schema.Component {
+  collectionName: 'components_sections_s5';
+  info: {
+    displayName: 'Section 5';
+    icon: 'apps';
+  };
+  attributes: {
+    Contact: Attribute.Component<'sections.contact'>;
   };
 }
 
@@ -656,6 +695,7 @@ declare module '@strapi/types' {
       'includes.lists': IncludesLists;
       'includes.no-image-card': IncludesNoImageCard;
       'includes.simple-card': IncludesSimpleCard;
+      'includes.strapi-image': IncludesStrapiImage;
       'includes.text-and-icons': IncludesTextAndIcons;
       'intros.landing-new': IntrosLandingNew;
       'intros.landing': IntrosLanding;
@@ -669,6 +709,7 @@ declare module '@strapi/types' {
       'sections.cards-carousel3': SectionsCardsCarousel3;
       'sections.cards-carousel4': SectionsCardsCarousel4;
       'sections.cards-carousel5': SectionsCardsCarousel5;
+      'sections.contact': SectionsContact;
       'sections.fa-qs': SectionsFaQs;
       'sections.i-want-to-item': SectionsIWantToItem;
       'sections.i-want-to': SectionsIWantTo;
@@ -677,6 +718,7 @@ declare module '@strapi/types' {
       'sections.section-2': SectionsSection2;
       'sections.section-3': SectionsSection3;
       'sections.section-4': SectionsSection4;
+      'sections.section-5': SectionsSection5;
       'sections.section-title': SectionsSectionTitle;
       'sections.small-cards-carousel': SectionsSmallCardsCarousel;
       'sections.speakers-carousel': SectionsSpeakersCarousel;

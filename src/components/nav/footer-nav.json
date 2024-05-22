@@ -7,11 +7,9 @@
   "options": {},
   "attributes": {
     "Logo": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.strapi-image"
     },
     "Disclaimer": {
       "type": "string"

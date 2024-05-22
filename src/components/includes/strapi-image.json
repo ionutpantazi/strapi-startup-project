@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_isi",
+  "info": {
+    "displayName": "Strapi Image",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Width": {
+      "type": "string"
+    },
+    "Height": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_s5",
+  "info": {
+    "displayName": "Section 5",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.contact"
+    }
+  }
+}
