@@ -21,8 +21,8 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
     "strapi-plugin-navigation": "^2.4.0",
-    "styled-components": "5.3.3",
-    "strapi-provider-ydaws-s3": "./providers/strapi-provider-ydaws-s3"
+    "strapi-provider-ydaws-s3": "file:providers/strapi-provider-ydaws-s3",
+    "styled-components": "5.3.3"
   },
   "author": {
     "name": "A Strapi developer"
