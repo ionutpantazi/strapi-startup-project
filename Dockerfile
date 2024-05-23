@@ -11,7 +11,6 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json /usr/src/app/
 COPY .env.example /usr/src/app/.env
-COPY public/uploads /usr/src/app/public/uploads
 RUN yarn install
 
 # Bundle app source
