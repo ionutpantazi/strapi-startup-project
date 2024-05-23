@@ -1,7 +1,7 @@
 FROM node:20
 
 ENV PORT 1337
-ENV HOST 0.0.0.0
+ENV HOST 127.0.0.1
 ENV NODE_ENV production
 
 # Create app directory
