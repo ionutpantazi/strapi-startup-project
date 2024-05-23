@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: latest
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fa26f68130124db8976f67d1a668c01f }}/lg-strapi-docker-image:latest
         file: ./Dockerfile
 
   deploy:
