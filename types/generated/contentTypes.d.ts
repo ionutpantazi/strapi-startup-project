@@ -597,14 +597,15 @@ export interface PluginNavigationAudience extends Schema.CollectionType {
     pluralName: 'audiences';
     displayName: 'Audience';
     name: 'audience';
+    description: '';
   };
   options: {
-    increments: true;
-    comment: 'Audience';
+    draftAndPublish: false;
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
     key: Attribute.UID<'plugin::navigation.audience', 'name'>;
+    test: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

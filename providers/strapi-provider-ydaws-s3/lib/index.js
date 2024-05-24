@@ -51,44 +51,44 @@ module.exports = {
           }
         );
 
-        if (['.jpg', '.jpeg', '.png'].includes(file?.ext)) {
-          const webP = async () => {
-            if (['.jpg', '.jpeg'].includes(file?.ext)) {
-              return await sharp(file.stream.path)
-                .webp()
-                .toBuffer();
-            } else {
-              return await sharp(file.stream.path)
-                .webp({ lossless: true })
-                .toBuffer();
-            }
-          }
+        // if (['.jpg', '.jpeg', '.png'].includes(file?.ext)) {
+        //   const webP = async () => {
+        //     if (['.jpg', '.jpeg'].includes(file?.ext)) {
+        //       return await sharp(file.stream.path)
+        //         .webp()
+        //         .toBuffer();
+        //     } else {
+        //       return await sharp(file.stream.path)
+        //         .webp({ lossless: true })
+        //         .toBuffer();
+        //     }
+        //   }
 
-          S3.upload(
-            {
-              Key: `${path}${file.hash}${file.ext}.webp`,
-              Body: Buffer.from((await webP()).buffer, 'binary'),
-              ACL: 'public-read',
-              ContentType: 'image/webp',
-              ...customParams,
-            },
-            (err, data) => {
-              if (err) {
-                return reject(err);
-              }
+        //   S3.upload(
+        //     {
+        //       Key: `${path}${file.hash}${file.ext}.webp`,
+        //       Body: Buffer.from((await webP()).buffer, 'binary'),
+        //       ACL: 'public-read',
+        //       ContentType: 'image/webp',
+        //       ...customParams,
+        //     },
+        //     (err, data) => {
+        //       if (err) {
+        //         return reject(err);
+        //       }
 
-              // set the bucket file url
-              if (assertUrlProtocol(data.Location)) {
-                file.url = data.Location;
-              } else {
-                // Default protocol to https protocol
-                file.url = `https://${data.Location}`;
-              }
+        //       // set the bucket file url
+        //       if (assertUrlProtocol(data.Location)) {
+        //         file.url = data.Location;
+        //       } else {
+        //         // Default protocol to https protocol
+        //         file.url = `https://${data.Location}`;
+        //       }
 
-              resolve();
-            }
-          );
-        }
+        //       resolve();
+        //     }
+        //   );
+        // }
       });
 
     return {
