@@ -35,8 +35,8 @@ jobs:
     - name: Build the Docker image
       run: docker build -t ionutpantazi/lg-strapi-docker .
 
-    - name: Push the Docker image to ACR
-      run: docker push ionutpantazi/lg-strapi-docker
+    # - name: Push the Docker image to ACR
+    #   run: docker push ionutpantazi/lg-strapi-docker
     
     # - name: Build and push
     #   uses: docker/build-push-action@v5
