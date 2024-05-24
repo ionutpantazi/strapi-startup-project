@@ -19,31 +19,19 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
-    - name: Login to Docker Hub
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.AzureAppService_ContainerUsername_6f509ed379044bd89f2a24e7ada9d2a3 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_2c78cddba6ff4d98b7aa4b5d91b4275d }}
-
     - name: Log in to registry
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_6f509ed379044bd89f2a24e7ada9d2a3 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_2c78cddba6ff4d98b7aa4b5d91b4275d }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_6201f46fb6644330be1823de909d94ae }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_bc605b4824b0406897cb89e19d7fe93b }}
 
-    - name: Build the Docker image
-      run: docker build -t ionutpantazi/lg-strapi-docker2 .
-
-    - name: Push the Docker image to ACR
-      run: docker push ionutpantazi/lg-strapi-docker2
-    
-    # - name: Build and push
-    #   uses: docker/build-push-action@v5
-    #   with:
-    #     push: true
-    #     tags: latest
-    #     file: ./Dockerfile
+    - name: Build and push container image to registry
+      uses: docker/build-push-action@v3
+      with:
+        push: true
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_6201f46fb6644330be1823de909d94ae }}/lg-strapi-docker2:${{ github.sha }}
+        file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,6 +47,5 @@ jobs:
       with:
         app-name: 'lg-prototype-strapi'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_79ed991969f341c3a3c5064029dd5ddf }}
-        images: 'ionutpantazi/lg-strapi-docker2'
-        
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_12ab195c541d4f9b99d4194017f8c4f5 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_6201f46fb6644330be1823de909d94ae }}/lg-strapi-docker2:${{ github.sha }}'
