@@ -61,3 +61,4 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_79ed991969f341c3a3c5064029dd5ddf }}
         images: 'ionutpantazi/lg-strapi-docker2'
+        
