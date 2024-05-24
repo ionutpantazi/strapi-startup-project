@@ -32,8 +32,8 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_6f509ed379044bd89f2a24e7ada9d2a3 }}
         password: ${{ secrets.AzureAppService_ContainerPassword_2c78cddba6ff4d98b7aa4b5d91b4275d }}
 
-    - name: Build the Docker image
-      run: docker build -t ionutpantazi/lg-strapi-docker1 .
+    # - name: Build the Docker image
+    #   run: docker build -t ionutpantazi/lg-strapi-docker1 .
 
     # - name: Push the Docker image to ACR
     #   run: docker push ionutpantazi/lg-strapi-docker
@@ -60,4 +60,4 @@ jobs:
         app-name: 'lg-prototype-strapi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_79ed991969f341c3a3c5064029dd5ddf }}
-        images: 'ionutpantazi/lg-strapi-docker1'
+        images: 'ionutpantazi/test'
