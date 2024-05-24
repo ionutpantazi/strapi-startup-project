@@ -19,9 +19,6 @@
     "key": {
       "type": "uid",
       "targetField": "name"
-    },
-    "test": {
-      "type": "string"
     }
   }
 }

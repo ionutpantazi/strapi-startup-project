@@ -39,9 +39,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
-    },
-    "Test": {
-      "type": "string"
     }
   }
 }
