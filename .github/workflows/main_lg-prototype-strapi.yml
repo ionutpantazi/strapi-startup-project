@@ -32,8 +32,8 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_6f509ed379044bd89f2a24e7ada9d2a3 }}
         password: ${{ secrets.AzureAppService_ContainerPassword_2c78cddba6ff4d98b7aa4b5d91b4275d }}
 
-    # - name: Build the Docker image
-    #   run: docker build -t ionutpantazi/lg-strapi-docker .
+    - name: Build the Docker image
+      run: docker build -t ionutpantazi/lg-strapi-docker .
 
     # - name: Push the Docker image to ACR
     #   run: docker push ionutpantazi/lg-strapi-docker
