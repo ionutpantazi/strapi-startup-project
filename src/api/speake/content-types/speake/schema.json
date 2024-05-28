@@ -46,6 +46,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::workshop.workshop"
+    },
+    "Companies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::company.company"
     }
   }
 }
