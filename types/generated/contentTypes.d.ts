@@ -605,7 +605,6 @@ export interface PluginNavigationAudience extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     key: Attribute.UID<'plugin::navigation.audience', 'name'>;
-    test: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
