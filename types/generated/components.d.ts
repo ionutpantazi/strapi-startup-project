@@ -291,7 +291,14 @@ export interface IntrosLandingNew extends Schema.Component {
   attributes: {
     Title: Attribute.String;
     Introduction: Attribute.RichText;
-    Content: Attribute.RichText;
+    Content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     Background_Image: Attribute.Media;
     Event_Details: Attribute.Component<'includes.event-details'>;
     I_Want_To: Attribute.Component<'sections.i-want-to'>;
