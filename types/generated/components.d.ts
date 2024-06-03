@@ -281,6 +281,34 @@ export interface IncludesTextAndIcons extends Schema.Component {
   };
 }
 
+export interface IntrosHeader1 extends Schema.Component {
+  collectionName: 'components_h1';
+  info: {
+    displayName: 'Header 1';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Sub_Title: Attribute.String;
+    FAIcon: Attribute.Component<'includes.fa-icon'>;
+    Icons: Attribute.Component<'includes.icon', true>;
+  };
+}
+
+export interface IntrosHeaderImage extends Schema.Component {
+  collectionName: 'components_hi';
+  info: {
+    displayName: 'Header Image';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    Background_Image: Attribute.Media;
+    Bottom_Margin: Attribute.Integer;
+  };
+}
+
 export interface IntrosLandingNew extends Schema.Component {
   collectionName: 'components_ilhn';
   info: {
@@ -704,6 +732,8 @@ declare module '@strapi/types' {
       'includes.simple-card': IncludesSimpleCard;
       'includes.strapi-image': IncludesStrapiImage;
       'includes.text-and-icons': IncludesTextAndIcons;
+      'intros.header-1': IntrosHeader1;
+      'intros.header-image': IntrosHeaderImage;
       'intros.landing-new': IntrosLandingNew;
       'intros.landing': IntrosLanding;
       'intros.simple-slider': IntrosSimpleSlider;

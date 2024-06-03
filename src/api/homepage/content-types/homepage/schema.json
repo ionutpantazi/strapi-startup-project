@@ -17,7 +17,7 @@
     },
     "SEO_Meta": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.seo"
     },
     "Page_Content": {

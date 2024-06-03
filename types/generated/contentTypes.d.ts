@@ -1058,7 +1058,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   };
   attributes: {
     Title: Attribute.String;
-    SEO_Meta: Attribute.Component<'shared.seo', true>;
+    SEO_Meta: Attribute.Component<'shared.seo'>;
     Page_Content: Attribute.DynamicZone<
       [
         'intros.landing',
@@ -1131,12 +1131,14 @@ export interface ApiPagePage extends Schema.CollectionType {
   attributes: {
     Title: Attribute.String;
     Slug: Attribute.UID<'api::page.page', 'Title'>;
-    SEO_Meta: Attribute.Component<'shared.seo', true>;
+    SEO_Meta: Attribute.Component<'shared.seo'>;
     Page_Content: Attribute.DynamicZone<
       [
+        'intros.header-image',
         'intros.landing',
         'intros.landing-new',
         'intros.simple-slider',
+        'intros.header-1',
         'sections.speakers-carousel',
         'sections.cards-carousel',
         'sections.fa-qs',

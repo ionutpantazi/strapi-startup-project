@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_hi",
+  "info": {
+    "displayName": "Header Image",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Background_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Bottom_Margin": {
+      "type": "integer"
+    }
+  }
+}

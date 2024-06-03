@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_h1",
+  "info": {
+    "displayName": "Header 1",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "FAIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "includes.fa-icon"
+    },
+    "Icons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "includes.icon"
+    }
+  }
+}

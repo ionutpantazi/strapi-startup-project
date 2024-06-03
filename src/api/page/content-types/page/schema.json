@@ -20,15 +20,17 @@
     },
     "SEO_Meta": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.seo"
     },
     "Page_Content": {
       "type": "dynamiczone",
       "components": [
+        "intros.header-image",
         "intros.landing",
         "intros.landing-new",
         "intros.simple-slider",
+        "intros.header-1",
         "sections.speakers-carousel",
         "sections.cards-carousel",
         "sections.fa-qs",
