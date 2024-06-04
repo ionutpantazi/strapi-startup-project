@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_ir",
+  "info": {
+    "displayName": "Registration",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sub_Title": {
+      "type": "string"
+    },
+    "Bio_Placeholder": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "Disclaimer": {
+      "type": "string"
+    },
+    "Interests": {
+      "type": "component",
+      "repeatable": true,
+      "component": "includes.icon"
+    }
+  }
+}

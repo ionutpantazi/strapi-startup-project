@@ -1002,8 +1002,6 @@ export interface ApiFaqFaq extends Schema.CollectionType {
       'oneToMany',
       'api::faq-category.faq-category'
     >;
-    Test: Attribute.Blocks;
-    Test2: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1139,6 +1137,7 @@ export interface ApiPagePage extends Schema.CollectionType {
         'intros.landing-new',
         'intros.simple-slider',
         'intros.header-1',
+        'includes.registration',
         'sections.speakers-carousel',
         'sections.cards-carousel',
         'sections.fa-qs',

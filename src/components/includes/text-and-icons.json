@@ -23,7 +23,12 @@
       "component": "includes.fa-icon"
     },
     "Introduction": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     },
     "Icons": {
       "type": "component",

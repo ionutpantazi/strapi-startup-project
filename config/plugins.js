@@ -3,6 +3,9 @@ module.exports = () => {
       gql: {
         navigationItemRelated: ['Page']
       },
+      'import-export-entries': {
+        enabled: true,
+      },
       upload: {
         config: {
           provider: 'aws-s3',

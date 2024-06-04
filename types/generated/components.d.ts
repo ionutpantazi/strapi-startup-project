@@ -239,6 +239,28 @@ export interface IncludesNoImageCard extends Schema.Component {
   };
 }
 
+export interface IncludesRegistration extends Schema.Component {
+  collectionName: 'components_ir';
+  info: {
+    displayName: 'Registration';
+    icon: 'apps';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Sub_Title: Attribute.String;
+    Bio_Placeholder: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
+    Disclaimer: Attribute.String;
+    Interests: Attribute.Component<'includes.icon', true>;
+  };
+}
+
 export interface IncludesSimpleCard extends Schema.Component {
   collectionName: 'components_i_sc';
   info: {
@@ -276,7 +298,14 @@ export interface IncludesTextAndIcons extends Schema.Component {
     Title: Attribute.String;
     Icon: Attribute.Media;
     FAIcon: Attribute.Component<'includes.fa-icon'>;
-    Introduction: Attribute.RichText;
+    Introduction: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     Icons: Attribute.Component<'includes.icons'>;
   };
 }
@@ -729,6 +758,7 @@ declare module '@strapi/types' {
       'includes.list': IncludesList;
       'includes.lists': IncludesLists;
       'includes.no-image-card': IncludesNoImageCard;
+      'includes.registration': IncludesRegistration;
       'includes.simple-card': IncludesSimpleCard;
       'includes.strapi-image': IncludesStrapiImage;
       'includes.text-and-icons': IncludesTextAndIcons;
