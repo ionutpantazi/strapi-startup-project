@@ -274,6 +274,18 @@ export interface IncludesSimpleCard extends Schema.Component {
   };
 }
 
+export interface IncludesSpacer extends Schema.Component {
+  collectionName: 'components_is';
+  info: {
+    displayName: 'Spacer';
+    icon: 'apps';
+  };
+  attributes: {
+    Desktop: Attribute.Integer;
+    Mobile: Attribute.Integer;
+  };
+}
+
 export interface IncludesStrapiImage extends Schema.Component {
   collectionName: 'components_isi';
   info: {
@@ -760,6 +772,7 @@ declare module '@strapi/types' {
       'includes.no-image-card': IncludesNoImageCard;
       'includes.registration': IncludesRegistration;
       'includes.simple-card': IncludesSimpleCard;
+      'includes.spacer': IncludesSpacer;
       'includes.strapi-image': IncludesStrapiImage;
       'includes.text-and-icons': IncludesTextAndIcons;
       'intros.header-1': IntrosHeader1;

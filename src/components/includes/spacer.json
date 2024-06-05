@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_is",
+  "info": {
+    "displayName": "Spacer",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Desktop": {
+      "type": "integer"
+    },
+    "Mobile": {
+      "type": "integer"
+    }
+  }
+}

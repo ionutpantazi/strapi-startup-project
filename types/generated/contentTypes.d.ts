@@ -1138,6 +1138,7 @@ export interface ApiPagePage extends Schema.CollectionType {
         'intros.simple-slider',
         'intros.header-1',
         'includes.registration',
+        'includes.spacer',
         'sections.speakers-carousel',
         'sections.cards-carousel',
         'sections.fa-qs',
