@@ -11,6 +11,9 @@
     },
     "Mobile": {
       "type": "integer"
+    },
+    "Position": {
+      "type": "integer"
     }
   }
 }

@@ -40,6 +40,11 @@
       "type": "component",
       "repeatable": false,
       "component": "sections.section-4"
+    },
+    "Spacer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "includes.spacer"
     }
   }
 }

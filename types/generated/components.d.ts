@@ -283,6 +283,7 @@ export interface IncludesSpacer extends Schema.Component {
   attributes: {
     Desktop: Attribute.Integer;
     Mobile: Attribute.Integer;
+    Position: Attribute.Integer;
   };
 }
 
@@ -600,6 +601,7 @@ export interface SectionsSection1 extends Schema.Component {
     Lists: Attribute.Component<'includes.lists'>;
     Discussion: Attribute.Component<'includes.discussion'>;
     Section4: Attribute.Component<'sections.section-4'>;
+    Spacer: Attribute.Component<'includes.spacer', true>;
   };
 }
 
