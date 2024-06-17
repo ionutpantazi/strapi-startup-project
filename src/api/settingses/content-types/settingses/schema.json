@@ -20,6 +20,11 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "Registration_Questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "others.registration-questions"
     }
   }
 }

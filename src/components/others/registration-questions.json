@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_others_rq",
+  "info": {
+    "displayName": "Registration Questions",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "Answers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "others.registration-answers"
+    }
+  }
+}

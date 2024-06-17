@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_others_ra",
+  "info": {
+    "displayName": "Registration Answers",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Answer": {
+      "type": "string"
+    },
+    "Homepage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}

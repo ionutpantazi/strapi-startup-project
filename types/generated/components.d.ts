@@ -457,6 +457,34 @@ export interface NavPillars extends Schema.Component {
   };
 }
 
+export interface OthersRegistrationAnswers extends Schema.Component {
+  collectionName: 'components_others_ra';
+  info: {
+    displayName: 'Registration Answers';
+    icon: 'apps';
+  };
+  attributes: {
+    Answer: Attribute.String;
+    Homepage: Attribute.Relation<
+      'others.registration-answers',
+      'oneToOne',
+      'api::page.page'
+    >;
+  };
+}
+
+export interface OthersRegistrationQuestions extends Schema.Component {
+  collectionName: 'components_others_rq';
+  info: {
+    displayName: 'Registration Questions';
+    icon: 'apps';
+  };
+  attributes: {
+    Question: Attribute.String;
+    Answers: Attribute.Component<'others.registration-answers', true>;
+  };
+}
+
 export interface SectionsCardsCarousel extends Schema.Component {
   collectionName: 'components_sections_cc';
   info: {
@@ -786,6 +814,8 @@ declare module '@strapi/types' {
       'nav.header-nav': NavHeaderNav;
       'nav.item': NavItem;
       'nav.pillars': NavPillars;
+      'others.registration-answers': OthersRegistrationAnswers;
+      'others.registration-questions': OthersRegistrationQuestions;
       'sections.cards-carousel': SectionsCardsCarousel;
       'sections.cards-carousel2': SectionsCardsCarousel2;
       'sections.cards-carousel3': SectionsCardsCarousel3;

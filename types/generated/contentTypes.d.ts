@@ -742,7 +742,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -770,6 +769,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.user',
       'manyToOne',
       'plugin::users-permissions.role'
+    >;
+    Homepage: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::page.page'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1180,6 +1184,10 @@ export interface ApiSettingsesSettingses extends Schema.SingleType {
   };
   attributes: {
     SiteLogo: Attribute.Media;
+    Registration_Questions: Attribute.Component<
+      'others.registration-questions',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
